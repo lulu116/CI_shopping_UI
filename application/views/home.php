@@ -4,9 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
 <head>
 <title>Home</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo base_url()?>css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
+<script src="<?php echo base_url()?>js/jquery.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					});
 				</script>
 <!--slider-script-->
-		<script src="js/responsiveslides.min.js"></script>
+		<script src="<?php echo base_url()?>js/responsiveslides.min.js"></script>
 			<script>
 				$(function () {
 				  $("#slider1").responsiveSlides({
@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="container">	
 			<div class="header-top-in">			
 				<div class="logo">
-					<a href="home.php"><img src="<?php echo base_url()?>images/logo.png" alt=" " ></a>
+					<a href=""><img src="<?php echo base_url()?>images/logo.png" alt=" " ></a>
 				</div>
 				<div class="header-in">
 					<ul class="icon1 sub-icon1">
@@ -122,8 +122,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="h_menu4">
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="home.php"><i> </i>Desktops</a></li>
-					<li ><a href="#" >Laptops & Notebooks</a>
+					<li class="active"><a href="<?php echo site_url('HomeController')?>"><i> </i>Desktops</a></li>
+					<li ><a href="<?php echo site_url('ProductController')?>" >Laptops & Notebooks</a>
 						<ul class="drop">
 							<li><a href="products.php">Sony(2)</a></li>
 							<li><a href="products.php">Android(4)</a></li>

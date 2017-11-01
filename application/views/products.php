@@ -2,12 +2,12 @@
 <html>
 <head>
 <title>Products</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo base_url()?>css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
+<script src="<?php echo base_url()?>js/jquery.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="<?php echo base_url()?>css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,8 +16,8 @@
 <!--fonts-->
 <link href='https://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <!--//fonts-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/move-top.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/easing.js"></script>
 				<script type="text/javascript">
 					jQuery(document).ready(function($) {
 						$(".scroll").click(function(event){		
@@ -50,7 +50,7 @@
 			<div class="container">	
 			<div class="header-top-in">			
 				<div class="logo">
-					<a href="home.php"><img src="images/logo.png" alt=" " ></a>
+					<a href="home.php"><img src="<?php echo base_url()?>images/logo.png" alt=" " ></a>
 				</div>
 				<div class="header-in">
 					<ul class="icon1 sub-icon1">
@@ -68,7 +68,7 @@
 							  <div class="cart_box">
 							   	 <div class="message">
 							   	     <div class="alert-close"> </div> 
-					                <div class="list_img"><img src="images/14.jpg" class="img-responsive" alt=""></div>
+					                <div class="list_img"><img src="<?php echo base_url()?>images/14.jpg" class="img-responsive" alt=""></div>
 								    <div class="list_desc"><h4><a href="#">velit esse molestie</a></h4>1 x<span class="actual">
 		                             $12.00</span></div>
 		                              <div class="clearfix"></div>
@@ -77,7 +77,7 @@
 	                            <div class="cart_box1">
 								  <div class="message1">
 							   	     <div class="alert-close1"> </div> 
-					                <div class="list_img"><img src="images/15.jpg" class="img-responsive" alt=""></div>
+					                <div class="list_img"><img src="<?php echo base_url()?>images/15.jpg" class="img-responsive" alt=""></div>
 								    <div class="list_desc"><h4><a href="#">velit esse molestie</a></h4>1 x<span class="actual">
 		                             $12.00</span></div>
 		                              <div class="clearfix"></div>
@@ -126,7 +126,7 @@
 						<li><a href="contact.html" >Contact </a></li>
 					
 				</ul>
-				<script type="text/javascript" src="js/nav.js"></script>
+				<script type="text/javascript" src="<?php echo base_url()?>js/nav.js"></script>
 			</div>
 		</div>
 		</div>
@@ -168,7 +168,7 @@
 					<div class=" top-products">
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="images/pic.jpg" alt="" />
+								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
@@ -186,7 +186,7 @@
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="images/pic1.jpg" alt="" />	
+								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic1.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
@@ -204,7 +204,7 @@
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="images/pic2.jpg" alt="" />	
+								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic2.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
@@ -222,7 +222,7 @@
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="images/pic3.jpg" alt="" />	
+								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic3.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
@@ -243,7 +243,7 @@
 					<div class=" top-products">
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="images/pic4.jpg" alt="" />	
+								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic4.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
@@ -261,7 +261,7 @@
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="images/pic5.jpg" alt="" />	
+								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic5.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
@@ -279,7 +279,7 @@
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md ">
-								<a href="single.html" class="compare-in"><img  src="images/pic6.jpg" alt="" />	
+								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic6.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
@@ -297,7 +297,7 @@
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md ">
-								<a href="single.html" class="compare-in"><img  src="images/pic7.jpg" alt="" />	
+								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic7.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
@@ -318,7 +318,7 @@
 					<div class="top-products">
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html" class="compare-in" ><img  src="images/pic8.jpg" alt="" />
+								<a href="single.html" class="compare-in" ><img  src="<?php echo base_url()?>images/pic8.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
@@ -336,7 +336,7 @@
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="images/pic9.jpg" alt="" />
+								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic9.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
@@ -354,7 +354,7 @@
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="images/pic10.jpg" alt="" />
+								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic10.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
@@ -372,7 +372,7 @@
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="images/pic11.jpg" alt="" />
+								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic11.jpg" alt="" />
 								<div class="compare">
 									<span>Add to Compare</span>
 									<span>Add to Wishlist</span>
