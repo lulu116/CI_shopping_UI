@@ -2,12 +2,12 @@
 <html>
 <head>
 <title>Single</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo base_url()?>css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
+<script src="<?php echo base_url()?>js/jquery.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="<?php echo base_url()?>css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,8 +16,8 @@
 <!--fonts-->
 <link href='https://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <!--//fonts-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/move-top.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/easing.js"></script>
 				<script type="text/javascript">
 					jQuery(document).ready(function($) {
 						$(".scroll").click(function(event){		
@@ -51,7 +51,7 @@
 			<div class="container">	
 			<div class="header-top-in">			
 				<div class="logo">
-					<a href="home.php"><img src="images/logo.png" alt=" " ></a>
+					<a href="<?php echo site_url('HomeController')?>"><img src="<?php echo base_url()?>images/logo.png" alt=" " ></a>
 				</div>
 				<div class="header-in">
 					<ul class="icon1 sub-icon1">
@@ -69,7 +69,7 @@
 							  <div class="cart_box">
 							   	 <div class="message">
 							   	     <div class="alert-close"> </div> 
-					                <div class="list_img"><img src="images/14.jpg" class="img-responsive" alt=""></div>
+					                <div class="list_img"><img src="<?php echo base_url()?>images/14.jpg" class="img-responsive" alt=""></div>
 								    <div class="list_desc"><h4><a href="#">velit esse molestie</a></h4>1 x<span class="actual">
 		                             $12.00</span></div>
 		                              <div class="clearfix"></div>
@@ -78,7 +78,7 @@
 	                            <div class="cart_box1">
 								  <div class="message1">
 							   	     <div class="alert-close1"> </div> 
-					                <div class="list_img"><img src="images/15.jpg" class="img-responsive" alt=""></div>
+					                <div class="list_img"><img src="<?php echo base_url()?>images/15.jpg" class="img-responsive" alt=""></div>
 								    <div class="list_desc"><h4><a href="#">velit esse molestie</a></h4>1 x<span class="actual">
 		                             $12.00</span></div>
 		                              <div class="clearfix"></div>
@@ -108,8 +108,8 @@
 			<div class="h_menu4">
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="home.php"><i> </i>Desktops</a></li>
-					<li ><a href="#" >Laptops & Notebooks</a>
+					<li class="active"><a href="<?php echo site_url('HomeController')?>"><i> </i>Desktops</a></li>
+					<li ><a href="<?php echo site_url('ProductController')?>" >Laptops & Notebooks</a>
 						<ul class="drop">
 							<li><a href="products.php">Sony(2)</a></li>
 							<li><a href="products.php">Android(4)</a></li>
@@ -127,7 +127,7 @@
 						<li><a href="contact.html" >Contact </a></li>
 					
 				</ul>
-				<script type="text/javascript" src="js/nav.js"></script>
+				<script type="text/javascript" src="<?php echo base_url()?>js/nav.js"></script>
 			</div>
 		</div>
 		</div>
@@ -170,9 +170,9 @@
 						<!-- start product_slider -->
 				    <div class="flexslider">
 							        <!-- FlexSlider -->
-										<script src="js/imagezoom.js"></script>
-										  <script defer src="js/jquery.flexslider.js"></script>
-										<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+										<script src="<?php echo base_url()?>js/imagezoom.js"></script>
+										  <script defer src="<?php echo base_url()?>js/jquery.flexslider.js"></script>
+										<link rel="stylesheet" href="<?php echo base_url()?>css/flexslider.css" type="text/css" media="screen" />
 
 										<script>
 										// Can also be used with $(document).ready()
@@ -186,17 +186,17 @@
 									<!-- //FlexSlider-->
 
 							  <ul class="slides">
-								<li data-thumb="images/si1.jpg">
-									<div class="thumb-image"> <img src="images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+								<li data-thumb="<?php echo base_url()?>images/si1.jpg">
+									<div class="thumb-image"> <img src="<?php echo base_url()?>images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
-								<li data-thumb="images/si2.jpg">
-									 <div class="thumb-image"> <img src="images/si2.jpg" data-imagezoom="true" class="img-responsive"> </div>
+								<li data-thumb="<?php echo base_url()?>images/si2.jpg">
+									 <div class="thumb-image"> <img src="<?php echo base_url()?>images/si2.jpg" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
-								<li data-thumb="images/si.jpg">
-								   <div class="thumb-image"> <img src="images/si.jpg" data-imagezoom="true" class="img-responsive"> </div>
+								<li data-thumb="<?php echo base_url()?>images/si.jpg">
+								   <div class="thumb-image"> <img src="<?php echo base_url()?>images/si.jpg" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
-								<li data-thumb="images/si1.jpg">
-								   <div class="thumb-image"> <img src="images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+								<li data-thumb="<?php echo base_url()?>images/si1.jpg">
+								   <div class="thumb-image"> <img src="<?php echo base_url()?>images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
 							  </ul>
 							<div class="clearfix"></div>
@@ -249,7 +249,7 @@
 				<div class="content-top-in">
 						<div class="col-md-4 top-single">
 							<div class="col-md">
-								<img  src="images/pic8.jpg" alt="" />	
+								<img  src="<?php echo base_url()?>images/pic8.jpg" alt="" />
 								<div class="top-content">
 									<h5>Mascot Kitty - White</h5>
 									<div class="white">
@@ -262,7 +262,7 @@
 						</div>
 						<div class="col-md-4 top-single">
 							<div class="col-md">
-								<img  src="images/pic9.jpg" alt="" />	
+								<img  src="<?php echo base_url()?>images/pic9.jpg" alt="" />
 								<div class="top-content">
 									<h5>Mascot Kitty - White</h5>
 									<div class="white">
@@ -275,7 +275,7 @@
 						</div>
 						<div class="col-md-4 top-single-in">
 							<div class="col-md">
-								<img  src="images/pic10.jpg" alt="" />	
+								<img  src="<?php echo base_url()?>images/pic10.jpg" alt="" />
 								<div class="top-content">
 									<h5>Mascot Kitty - White</h5>
 									<div class="white">
@@ -314,7 +314,7 @@
 					<div class="single-bottom">
 						<h4>Product Categories</h4>
 							<div class="product">
-								<img class="img-responsive fashion" src="images/st1.jpg" alt="">
+								<img class="img-responsive fashion" src="<?php echo base_url()?>images/st1.jpg" alt="">
 							<div class="grid-product">
 								<a href="#" class="elit">Consectetuer adipiscing elit</a>
 								<span class="price price-in"><small>$500.00</small> $400.00</span>
@@ -322,7 +322,7 @@
 							<div class="clearfix"> </div>
 							</div>
 							<div class="product">
-								<img class="img-responsive fashion" src="images/st2.jpg" alt="">
+								<img class="img-responsive fashion" src="<?php echo base_url()?>images/st2.jpg" alt="">
 							<div class="grid-product">
 								<a href="#" class="elit">Consectetuer adipiscing elit</a>
 								<span class="price price-in"><small>$500.00</small> $400.00</span>
@@ -330,7 +330,7 @@
 							<div class="clearfix"> </div>
 							</div>
 							<div class="product">
-								<img class="img-responsive fashion" src="images/st3.jpg" alt="">
+								<img class="img-responsive fashion" src="<?php echo base_url()?>images/st3.jpg" alt="">
 							<div class="grid-product">
 								<a href="#" class="elit">Consectetuer adipiscing elit</a>
 								<span class="price price-in"><small>$500.00</small> $400.00</span>
