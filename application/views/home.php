@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="<?php echo base_url()?>js/jquery.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="<?php echo base_url()?>css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -185,24 +185,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<!-- Slideshow 4 -->
 			   <div class="slider">
 			<ul class="rslides" id="slider1">
-			  <li><img src="<?php echo base_url()?>images/banner.jpg" alt="">
-			  </li>
-			  <li><img src="<?php echo base_url()?>images/banner1.jpg" alt="">
-			  </li>
-			  <li><img src="<?php echo base_url()?>images/banner.jpg" alt="">
-			  </li>
-			  <li><img src="<?php echo base_url()?>images/banner2.jpg" alt="">
-			  </li>
+				<?php
+					for($i=0;$i<10;$i++){
+				?>
+					  <li>
+						  <img src="<?php echo base_url()?>images/banner.jpg" alt="">
+					  </li>
+				<?php
+				  }
+				?>
 			</ul>
 		</div>
 
 				<div class="banner-bottom">
 					<div class="banner-matter">
 						<p>Childish Gambino - Camp Now Available for just $9.99</p> 
-						<a href="single.html" class="hvr-shutter-in-vertical ">Purchase</a>
+						<a href="<?php echo site_url('single')?>" class="hvr-shutter-in-vertical ">Purchase</a>
 					</div>
 					<div class="purchase">
-						<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">Purchase</a>
+						<a href="<?php echo site_url('single')?>" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">Purchase</a>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -216,13 +217,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="content-top">
 					<h3 class="future">FEATURED</h3>
 					<div class="content-top-in">
+						<?php
+							for($i=0;$i<5;$i++){
+
+
+						?>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html"><img  src="<?php echo base_url()?>images/pi.jpg" alt="" /></a>
+								<a href="<?php echo site_url('single')?>"><img src="<?php echo base_url()?>images/pi.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">Mascot Kitty - White</a></h5>
+									<h5><a href="<?php echo site_url('single')?>">Mascot Kitty - White</a></h5>
 									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
+										<a href="<?php echo site_url('single')?>" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
 										<p class="dollar"><span class="in-dollar">$</span><span>2</span><span>0</span></p>
 										<div class="clearfix"></div>
 									</div>
@@ -230,45 +236,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>							
 							</div>
 						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html"><img  src="<?php echo base_url()?>images/pi1.jpg" alt="" />	</a>
-								<div class="top-content">
-									<h5><a href="single.html">Bite Me</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>3</span><span>0</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html"><img  src="<?php echo base_url()?>images/pi2.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5><a href="single.html">Little Fella</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>5</span><span>0</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html"><img  src="<?php echo base_url()?>images/pi3.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5><a href="single.html">Astral Cruise</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>4</span><span>5</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
+						<?php
+							}
+						?>
 					<div class="clearfix"></div>
 					</div>
 				</div>
@@ -318,68 +288,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="content-bottom">
 					<h3 class="future">LATEST</h3>
 					<div class="content-bottom-in">
-					<ul id="flexiselDemo2">			
-						<li><div class="col-md men">
-								<a href="single.html" class="compare-in "><img  src="<?php echo base_url()?>images/pi4.jpg" alt="" />
-								<div class="compare in-compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div></a>
-								<div class="top-content bag">
-									<h5><a href="single.html">Symbolic Bag</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>4</span><span>0</span></p>
-										<div class="clearfix"></div>
+					<ul id="flexiselDemo2">
+						<?php
+						for($i=0;$i<15;$i++){
+							?>
+							<li><div class="col-md men">
+									<a href="<?php echo site_url('single')?>" class="compare-in "><img src="<?php echo base_url()?>images/pi4.jpg" alt="" />
+										<div class="compare in-compare">
+											<span>Add to Compare</span>
+											<span>Add to Wishlist</span>
+										</div></a>
+									<div class="top-content bag">
+										<h5><a href="<?php echo site_url('single')?>">Symbolic Bag</a></h5>
+										<div class="white">
+											<a href="<?php echo site_url('single')?>" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+											<p class="dollar"><span class="in-dollar">$</span><span>4</span><span>0</span></p>
+											<div class="clearfix"></div>
+										</div>
 									</div>
-								</div>							
-							</div></li>
-						<li><div class="col-md men">
-								<a href="single.html" class="compare-in "><img  src="<?php echo base_url()?>images/pi5.jpg" alt="" />
-								<div class="compare in-compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div></a>	
-								<div class="top-content bag">
-									<h5><a href="single.html">Interesting Read</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>2</span><span>5</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div></li>
-						<li><div class="col-md men">
-								<a href="single.html" class="compare-in "><img  src="<?php echo base_url()?>images/pi6.jpg" alt="" />
-								<div class="compare in-compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div></a>	
-								<div class="top-content bag">
-									<h5><a href="single.html">The Carter</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>1</span><span>0</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div></li>
-						<li><div class="col-md men">
-								<a href="single.html" class="compare-in "><img  src="<?php echo base_url()?>images/pi7.jpg" alt="" />
-								<div class="compare in-compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div></a>	
-								<div class="top-content bag">
-									<h5><a href="single.html">Onesie</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>6</span><span>0</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div></li>
-					
+								</div></li>
+							<?php
+						}
+						?>
+
+
 					</ul>
 					<script type="text/javascript">
 		$(window).load(function() {
