@@ -50,7 +50,7 @@
 			<div class="container">	
 			<div class="header-top-in">			
 				<div class="logo">
-					<a href="home.php"><img src="<?php echo base_url()?>images/logo.png" alt=" " ></a>
+					<a href="<?php echo site_url('HomeController')?>"><img src="<?php echo base_url()?>images/logo.png" alt=" " ></a>
 				</div>
 				<div class="header-in">
 					<ul class="icon1 sub-icon1">
@@ -107,7 +107,7 @@
 			<div class="h_menu4">
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li ><a href="home.php"><i> </i>Desktops</a></li>
+					<li ><a href="<?php echo site_url('HomeController')?>"><i> </i>Desktops</a></li>
 					<li class="active"><a href="#" >Laptops & Notebooks</a>
 						<ul class="drop">
 							<li><a href="products.php">Sony(2)</a></li>
@@ -166,228 +166,30 @@
 			<div class="products">
 					<h2 class=" products-in">PRODUCTS</h2>
 					<div class=" top-products">
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div>
-								</a>	
-								<div class="top-content">
-									<h5><a href="single.html">Popular belief</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>2</span><span>0</span></p>
-										<div class="clearfix"></div>
+						<?php
+						for($i=0;$i<15;$i++){
+							?>
+							<div class="col-md-3 md-col">
+								<div class="col-md">
+									<a href="<?php echo site_url('single')?>" class="compare-in"><img src="<?php echo base_url()?>images/pic.jpg" alt="" />
+										<div class="compare">
+											<span>Add to Compare</span>
+											<span>Add to Wishlist</span>
+										</div>
+									</a>
+									<div class="top-content">
+										<h5><a href="single.php">Popular belief</a></h5>
+										<div class="white">
+											<a href="<?php echo site_url('single')?>"" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+											<p class="dollar"><span class="in-dollar">$</span><span>2</span><span>0</span></p>
+											<div class="clearfix"></div>
+										</div>
 									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic1.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
 								</div>
-								</a>
-								<div class="top-content">
-									<h5><a href="single.html" >Simply random</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>6</span><span>0</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
 							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic2.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div>
-								</a>
-								<div class="top-content">
-									<h5> <a href="single.html">Classical Latin</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>1</span><span>5</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic3.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div>
-								</a>
-								<div class="top-content">
-									<h5><a href="single.html">Standard chunk</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>4</span><span>0</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-					<div class="clearfix"></div>
-					</div>
-					<div class=" top-products">
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic4.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div>
-								</a>
-								<div class="top-content">
-									<h5><a href="single.html">Simply random</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>2</span><span>5</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic5.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div>
-								</a>
-								<div class="top-content">
-									<h5><a href="single.html">Popular belief</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>5</span><span>5</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md ">
-								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic6.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div>
-								</a>
-								<div class="top-content">
-									<h5> <a href="single.html">Classical Latin</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>3</span><span>0</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md ">
-								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic7.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div>
-								</a>
-								<div class="top-content">
-									<h5><a href="single.html">Standard chunk</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>6</span><span>0</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-					<div class="clearfix"></div>
-					</div>
-					<div class="top-products">
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html" class="compare-in" ><img  src="<?php echo base_url()?>images/pic8.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div>
-								</a>
-								<div class="top-content">
-									<h5> <a href="single.html">Classical Latin</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>2</span><span>0</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic9.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div>
-								</a>	
-								<div class="top-content">
-									<h5><a href="single.html">Standard chunk</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>1</span><span>5</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic10.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div>
-								</a>	
-								<div class="top-content">
-								<h5><a href="single.html">Simply random</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>4</span><span>0</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html" class="compare-in"><img  src="<?php echo base_url()?>images/pic11.jpg" alt="" />
-								<div class="compare">
-									<span>Add to Compare</span>
-									<span>Add to Wishlist</span>
-								</div>
-								</a>	
-								<div class="top-content">
-									<h5><a href="single.html">Popular belief</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>2</span><span>9</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
+							<?php
+						}
+						?>
 					<div class="clearfix"></div>
 					</div>
 			</div>
