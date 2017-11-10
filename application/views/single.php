@@ -56,7 +56,7 @@
 				<div class="header-in">
 					<ul class="icon1 sub-icon1">
 							<li  ><a href="wishlist.html">WISH LIST (0)</a> </li>
-							<li  ><a href="account.html">  MY ACCOUNT</a></li>
+							<li  ><a href="account.php">  MY ACCOUNT</a></li>
 							<li ><a href="#" > SHOPPING CART</a></li>
 							<li > <a href="checkout.html" >CHECKOUT</a> </li>	
 							<li><div class="cart">
@@ -186,17 +186,21 @@
 									<!-- //FlexSlider-->
 
 							  <ul class="slides">
-								<li data-thumb="<?php echo base_url()?>images/si1.jpg">
-									<div class="thumb-image"> <img src="<?php echo base_url()?>images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
-								</li>
-								<li data-thumb="<?php echo base_url()?>images/si2.jpg">
-									 <div class="thumb-image"> <img src="<?php echo base_url()?>images/si2.jpg" data-imagezoom="true" class="img-responsive"> </div>
-								</li>
-								<li data-thumb="<?php echo base_url()?>images/si.jpg">
-								   <div class="thumb-image"> <img src="<?php echo base_url()?>images/si.jpg" data-imagezoom="true" class="img-responsive"> </div>
-								</li>
-								<li data-thumb="<?php echo base_url()?>images/si1.jpg">
-								   <div class="thumb-image"> <img src="<?php echo base_url()?>images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+								  <?php
+								  $productUrl = base_url();
+								  $homeproductId = $_GET['productId'];
+								  foreach($productMsg as $productmsg){
+								  if($productmsg['product_id'] == $homeproductId){
+								  $title = $productmsg['title'];
+								  $price = $productmsg['price'];
+								  $detail = $productmsg['detail'];
+								  foreach($imagesMsg as $imagesmsg){
+								  if($imagesmsg['product_id'] == $homeproductId){
+									  $img = $productUrl.'images/banner_slide/'.$imagesmsg['imgUrl'];
+
+								  ?>
+								<li data-thumb="<?php echo $img?>">
+									<div class="thumb-image"> <img src="<?php echo $img?>" data-imagezoom="true" class="img-responsive"> </div>
 								</li>
 							  </ul>
 							<div class="clearfix"></div>
@@ -206,9 +210,9 @@
 					</div>	
 					<div class="col-md-7 single-top-in">
 						<div class="single-para">
-							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
+							<h4><?php echo $title?></h4>
 							<div class="para-grid">
-								<span  class="add-to">$32.8</span>
+								<span  class="add-to">$<?php echo $price?></span>
 								<a href="#" class="hvr-shutter-in-vertical cart-to">Add to Cart</a>					
 								<div class="clearfix"></div>
 							 </div>
@@ -239,11 +243,17 @@
 								</select></li>
 							</ul>
 						</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-							
+							<p><?php echo $detail?></p>
 								<a href="#" class="hvr-shutter-in-vertical ">More details</a>
 							
 						</div>
+						<?php
+										}
+
+									}
+								}
+						 }
+						?>
 					</div>
 				<div class="clearfix"> </div>
 				<div class="content-top-in">
@@ -388,7 +398,7 @@
 					<div class="footer-middle-in">
 						<h6>My Account</h6>
 						<ul>
-							<li><a href="account.html">My Account</a></li>
+							<li><a href="account.php">My Account</a></li>
 							<li><a href="#">Order History</a></li>
 							<li><a href="wishlist.html">Wish List</a></li>
 							<li><a href="#">Newsletter</a></li>

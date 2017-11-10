@@ -2,12 +2,15 @@
 <html>
 <head>
 <title>Account</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo base_url()?>css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
+<script src="<?php echo base_url()?>js/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+	<script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+	<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="<?php echo base_url()?>css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,8 +19,8 @@
 <!--fonts-->
 <link href='https://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <!--//fonts-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/move-top.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/easing.js"></script>
 				<script type="text/javascript">
 					jQuery(document).ready(function($) {
 						$(".scroll").click(function(event){		
@@ -50,12 +53,12 @@
 			<div class="container">
 			<div class="header-top-in">			
 				<div class="logo">
-					<a href="home.php"><img src="images/logo.png" alt=" " ></a>
+					<a href="<?php echo site_url('homeController')?>"><img src="<?php echo base_url()?>images/logo.png" alt=" " ></a>
 				</div>
 				<div class="header-in">
 					<ul class="icon1 sub-icon1">
 							<li  ><a href="wishlist.html">WISH LIST (0)</a> </li>
-							<li  ><a href="account.html">  MY ACCOUNT</a></li>
+							<li  ><a href="account.php">  MY ACCOUNT</a></li>
 							<li ><a href="#" > SHOPPING CART</a></li>
 							<li > <a href="checkout.html" >CHECKOUT</a> </li>	
 							<li><div class="cart">
@@ -68,7 +71,7 @@
 							  <div class="cart_box">
 							   	 <div class="message">
 							   	     <div class="alert-close"> </div> 
-					                <div class="list_img"><img src="images/14.jpg" class="img-responsive" alt=""></div>
+					                <div class="list_img"><img src="<?php echo base_url()?>images/14.jpg" class="img-responsive" alt=""></div>
 								    <div class="list_desc"><h4><a href="#">velit esse molestie</a></h4>1 x<span class="actual">
 		                             $12.00</span></div>
 		                              <div class="clearfix"></div>
@@ -77,7 +80,7 @@
 	                            <div class="cart_box1">
 								  <div class="message1">
 							   	     <div class="alert-close1"> </div> 
-					                <div class="list_img"><img src="images/15.jpg" class="img-responsive" alt=""></div>
+					                <div class="list_img"><img src="<?php echo base_url()?>images/15.jpg" class="img-responsive" alt=""></div>
 								    <div class="list_desc"><h4><a href="#">velit esse molestie</a></h4>1 x<span class="actual">
 		                             $12.00</span></div>
 		                              <div class="clearfix"></div>
@@ -107,8 +110,8 @@
 			<div class="h_menu4">
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="home.php"><i> </i>Desktops</a></li>
-					<li ><a href="#" >Laptops & Notebooks</a>
+					<li class="active"><a href="<?php echo site_url('HomeController')?>"><i> </i>Desktops</a></li>
+					<li ><a href="<?php echo site_url('ProductController')?>" >Laptops & Notebooks</a>
 						<ul class="drop">
 							<li><a href="products.php">Sony(2)</a></li>
 							<li><a href="products.php">Android(4)</a></li>
@@ -126,7 +129,7 @@
 						<li><a href="contact.html" >Contact </a></li>
 					
 				</ul>
-				<script type="text/javascript" src="js/nav.js"></script>
+				<script type="text/javascript" src="<?php echo base_url()?>js/nav.js"></script>
 			</div>
 		</div>
 		</div>
@@ -165,25 +168,8 @@
 	<div class="container">
 		<div class="account">
 			<h2 class="account-in">Account</h2>
-				<form>
-				<div>
-					<span>First Name*</span>
-					<input type="text">
-				</div> 	
-				<div>			
-					<span class="name-in">Last Name*</span>
-					<input type="text"> 
-				</div>			
-				<div> 	
-					<span class="mail">Email*</span>
-					<input type="text"> 
-				</div>
-				<div> 
-					<span class="word">Password*</span>
-					<input type="password">
-				</div>				
-					<input type="submit" value="Login"> 
-				</form>
+					<div id="formlogin"></div>
+					<script type="text/babel" src="<?php echo base_url()?>widge/demo/formlogin.js"></script>
 		</div>
 	</div>
 		<!---->
@@ -232,7 +218,7 @@
 					<div class="footer-middle-in">
 						<h6>My Account</h6>
 						<ul>
-							<li><a href="account.html">My Account</a></li>
+							<li><a href="account.php">My Account</a></li>
 							<li><a href="#">Order History</a></li>
 							<li><a href="wishlist.html">Wish List</a></li>
 							<li><a href="#">Newsletter</a></li>

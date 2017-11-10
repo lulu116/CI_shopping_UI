@@ -55,7 +55,7 @@
 				<div class="header-in">
 					<ul class="icon1 sub-icon1">
 							<li  ><a href="wishlist.html">WISH LIST (0)</a> </li>
-							<li  ><a href="account.html">  MY ACCOUNT</a></li>
+							<li  ><a href="<?php echo site_url('loginController')?>">  MY ACCOUNT</a></li>
 							<li ><a href="#" > SHOPPING CART</a></li>
 							<li > <a href="checkout.html" >CHECKOUT</a> </li>	
 							<li><div class="cart">
@@ -167,11 +167,13 @@
 					<h2 class=" products-in">PRODUCTS</h2>
 					<div class=" top-products">
 						<?php
-						for($i=0;$i<15;$i++){
+						$productStaticUrl = base_url();
+						foreach($static_small_slider as $productStatic){
+							$productStaticImg = $productStaticUrl.'/images/banner_slide/'.$productStatic['imgUrl'];
 							?>
 							<div class="col-md-3 md-col">
 								<div class="col-md">
-									<a href="<?php echo site_url('single')?>" class="compare-in"><img src="<?php echo base_url()?>images/pic.jpg" alt="" />
+									<a href="<?php echo site_url('single')?>" class="compare-in"><img src="<?php echo $productStaticImg?>" alt="" />
 										<div class="compare">
 											<span>Add to Compare</span>
 											<span>Add to Wishlist</span>
@@ -240,7 +242,7 @@
 					<div class="footer-middle-in">
 						<h6>My Account</h6>
 						<ul>
-							<li><a href="account.html">My Account</a></li>
+							<li><a href="account.php">My Account</a></li>
 							<li><a href="#">Order History</a></li>
 							<li><a href="wishlist.html">Wish List</a></li>
 							<li><a href="#">Newsletter</a></li>

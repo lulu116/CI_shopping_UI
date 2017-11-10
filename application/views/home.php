@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="header-in">
 					<ul class="icon1 sub-icon1">
 							<li  ><a href="wishlist.html">WISH LIST (0)</a> </li>
-							<li  ><a href="account.html">  MY ACCOUNT</a></li>
+							<li  ><a href="<?php echo site_url('loginController')?>">  MY ACCOUNT</a></li>
 							<li ><a href="#" > SHOPPING CART</a></li>
 							<li > <a href="checkout.html" >CHECKOUT</a> </li>	
 							<li><div class="cart">
@@ -183,13 +183,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="banner">
 	
 				<!-- Slideshow 4 -->
-			   <div class="slider">
+				<div class="slider">
 			<ul class="rslides" id="slider1">
 				<?php
-					for($i=0;$i<10;$i++){
+					$imgUrl = base_url();
+					foreach($slide as $slideval){
+						$imgval = $imgUrl.'/images/banner_slide/'.$slideval['imgUrl'];
 				?>
 					  <li>
-						  <img src="<?php echo base_url()?>images/banner.jpg" alt="">
+						  <img src="<?php echo $imgval?>" alt="" style="width:1112px;height: 350px;">
 					  </li>
 				<?php
 				  }
@@ -218,18 +220,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<h3 class="future">FEATURED</h3>
 					<div class="content-top-in">
 						<?php
-							for($i=0;$i<5;$i++){
-
+							$staticslide1Url = base_url();
+							foreach($static_small_slider as $staticslide1){
+							$staticslide1img = $staticslide1Url.'/images/banner_slide/'.$staticslide1['imgUrl'];
+								foreach($productMsg as $productmsg){
+									if($staticslide1['product_id'] == $productmsg['product_id']){
+										$title = $productmsg['title'];
+										$price = $productmsg['price'];
+										$productId = $productmsg['product_id'];
 
 						?>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="<?php echo site_url('single')?>"><img src="<?php echo base_url()?>images/pi.jpg" alt="" /></a>
+
+								<a href="<?php echo site_url('single?productId='.$productId)?>"><img src="<?php echo $staticslide1img?>" alt="" /></a>
+
 								<div class="top-content">
-									<h5><a href="<?php echo site_url('single')?>">Mascot Kitty - White</a></h5>
+									<h5><a href="<?php echo site_url('single?productId='.$productId)?>"><?php echo $title?></a></h5>
 									<div class="white">
-										<a href="<?php echo site_url('single')?>" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>2</span><span>0</span></p>
+										<a href="<?php echo site_url('single?productId='.$productId)?>" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
+										<p class="dollar"><span class="in-dollar">$</span><span><?php echo $price?></span></p>
 										<div class="clearfix"></div>
 									</div>
 
@@ -237,6 +247,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 						<?php
+									}
+								}
 							}
 						?>
 					<div class="clearfix"></div>
@@ -246,12 +258,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="content-middle">
 					<h3 class="future">BRANDS</h3>
 					<div class="content-middle-in">
-					<ul id="flexiselDemo1">			
-						<li><img src="<?php echo base_url()?>images/ap.png"/></li>
-						<li><img src="<?php echo base_url()?>images/ap1.png"/></li>
-						<li><img src="<?php echo base_url()?>images/ap2.png"/></li>
-						<li><img src="<?php echo base_url()?>images/ap3.png"/></li>
-					
+					<ul id="flexiselDemo1">
+						<?php
+							$slideUrl = base_url();
+							foreach ($static_small_slider1 as $staticImg) {
+								$staticImg1 = $slideUrl.'/images/banner_slide/'.$staticImg['imgUrl'];
+						?>
+						<li><img src="<?php echo $staticImg1?>"/></li>
+						<?php
+						}
+						?>
 					</ul>
             		<script type="text/javascript">
 		$(window).load(function() {
@@ -290,26 +306,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="content-bottom-in">
 					<ul id="flexiselDemo2">
 						<?php
-						for($i=0;$i<15;$i++){
-							?>
-							<li><div class="col-md men">
-									<a href="<?php echo site_url('single')?>" class="compare-in "><img src="<?php echo base_url()?>images/pi4.jpg" alt="" />
-										<div class="compare in-compare">
-											<span>Add to Compare</span>
-											<span>Add to Wishlist</span>
-										</div></a>
-									<div class="top-content bag">
-										<h5><a href="<?php echo site_url('single')?>">Symbolic Bag</a></h5>
-										<div class="white">
-											<a href="<?php echo site_url('single')?>" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-											<p class="dollar"><span class="in-dollar">$</span><span>4</span><span>0</span></p>
-											<div class="clearfix"></div>
+						$dynamicUrl = base_url();
+						foreach($dynamics_small_slider as $dynamicimg){
+							$dynamicImg = $dynamicUrl.'/images/banner_slide/'.$dynamicimg['imgUrl'];
+								foreach($productMsg1 as $productmsg1){
+								if($dynamicimg['product_id'] == $productmsg1['product_id']) {
+									$title = $productmsg1['title'];
+									$price = $productmsg1['price'];
+									$productId = $productmsg1['product_id'];
+									?>
+									<li>
+										<div class="col-md men">
+											<a href="<?php echo site_url('single?productId='.$productId)?>" ?>" class="compare-in "><img
+													src="<?php echo $dynamicImg ?>" alt=""/>
+												<div class="compare in-compare">
+													<span>Add to Compare</span>
+													<span>Add to Wishlist</span>
+												</div>
+											</a>
+											<div class="top-content bag">
+												<h5><a href="<?php echo site_url('single?productId='.$productId)?>"><?php echo $title ?></a>
+												</h5>
+												<div class="white">
+													<a href="<?php echo site_url('single?productId='.$productId) ?>"
+													   class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO
+														CART</a>
+													<p class="dollar"><span
+															class="in-dollar">$</span><span><?php echo $price ?></span></p>
+													<div class="clearfix"></div>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div></li>
-							<?php
-						}
-						?>
+									</li>
+									<?php
+								                    }
+											    }
+
+										  }
+						            ?>
 
 
 					</ul>
@@ -399,7 +433,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="footer-middle-in">
 						<h6>My Account</h6>
 						<ul>
-							<li><a href="account.html">My Account</a></li>
+							<li><a href="<?php echo site_url('loginController')?>">My Account</a></li>
 							<li><a href="#">Order History</a></li>
 							<li><a href="wishlist.html">Wish List</a></li>
 							<li><a href="#">Newsletter</a></li>
