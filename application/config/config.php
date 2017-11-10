@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://192.168.4.110:80/lulu_githubproject';
+$config['base_url'] = '';
 
 /*
 |--------------------------------------------------------------------------
